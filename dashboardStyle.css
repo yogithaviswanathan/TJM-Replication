@@ -1,0 +1,152 @@
+
+.dashboard-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    background-image: url('images/hero3.png'); /* Subtle texture */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* ADD THESE LINES: */
+    background-size: cover;      /* Forces the image to cover the entire area */
+    background-repeat: no-repeat; /* Stops the image from repeating/tiling */
+    background-position: center;  
+}
+
+/* --- Central Content --- */
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 30px 0;
+    letter-spacing: 0.5px;
+}
+
+/* Separator Lines */
+.separator {
+  height: 1px;
+  background-color: white;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .separator {
+    display: none;
+  }
+}
+
+
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.btn-pickup {
+    background-color: #00d285; /* Bright green/teal */
+    border: 2px solid #00d285;
+    color: #fff;
+}
+
+.btn-pickup:hover {
+    background-color: #00b070;
+    border-color: #00b070;
+}
+
+.btn-delivery {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-delivery:hover {
+    background-color: white;
+    color: #0e1013;
+}
+
+/* --- Navigation Arrows --- */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.left-arrow { left: 30px; }
+.right-arrow { right: 30px; }
+
+/* --- Carousel Dots --- */
+.carousel-dots {
+    position: absolute;
+    bottom: 30px; /* Adjusted to sit above bottom plate */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+
+.cta-buttons {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .cta-buttons {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+
+.hero-title {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: 'Righteous', cursive;
+  letter-spacing: 1px;
+
+  /* mobile → desktop responsive */
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+}
