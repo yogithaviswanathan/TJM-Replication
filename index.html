@@ -29,15 +29,27 @@
       </div>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#">Menu</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Our Locations</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Order Online</a></li>
-        <li><a href="#">Catering Inquiry</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li class="dropdown">
+          <a href="#locations" class="dropdown-toggle">Our Locations <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#new-jersey">New Jersey</a></li>
+            <li><a href="#houston">Houston</a></li>
+          </ul>
+        </li>
+        <li><a href="#events">Events</a></li>
+        <li class="dropdown">
+          <a href="#order-online" class="dropdown-toggle">Order Online <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#pickup">Pickup</a></li>
+            <li><a href="#delivery">Delivery</a></li>
+          </ul>
+        </li>
+        <li><a href="http://127.0.0.1:5501/Catering.html">Catering Inquiry</a></li>
         
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="http://127.0.0.1:5501/Contact.html">Contact Us</a></li>
       </ul>
     </nav>
 
@@ -65,6 +77,7 @@
         </div>
     </section>
 
+    
     <div class="section-content">
         <!-- Title -->
         <h1 class="section-title">Welcome to Thanjai Mess</h1>
@@ -173,7 +186,7 @@
 </div>
     
 
-<section class="story">
+<section class="story" id="about">
   <div class="story-container">
 
     <!-- LEFT CONTENT -->
@@ -315,7 +328,7 @@
 
 
 
-<section class="events">
+<section class="events" id="events">
   <h1>Upcoming Events</h1>
   <p class="subtitle">Stay tuned for our upcoming events</p>
 
@@ -386,12 +399,88 @@
 
 </section>
 
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Contact Info -->
+        <div class="footer-box">
+            <h3>Contact Info</h3>
+
+            <p><i class="fas fa-map-marker-alt"></i>
+                2226 US-130, North Brunswick Township, NJ 08902
+            </p>
+
+            <p><i class="fas fa-phone"></i>
+                +1 (732) 820-6808
+            </p>
+
+            <p><i class="fas fa-envelope"></i>
+                thanjaimess.usa@gmail.com
+            </p>
+
+            <div class="social-icons">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-f"></i>
+            </div>
+
+            <h4>We Accept</h4>
+            <div class="cards">
+                <img src="images/visa.png" alt="Visa">
+                <img src="images/mastercard.png" alt="MasterCard">
+                <img src="images/discover.jpg" alt="Discover">
+                <img src="images/amex2.png" alt="Amex">
+                
+                
+            </div>
+        </div>
+
+        <!-- Opening Hours -->
+        <div class="footer-box">
+            <h3>Opening Hours</h3>
+
+            <div class="hours">
+                <p><span>Monday</span> 11:00 AM - 02:30 PM<br>05:30 PM - 09:00 PM</p>
+                <p><span>Tuesday</span> Holiday</p>
+                <p><span>Wednesday</span> 11:00 AM - 02:30 PM<br>05:30 PM - 10:00 PM</p>
+                <p><span>Thursday</span> 11:00 AM - 02:30 PM<br>05:30 PM - 10:00 PM</p>
+                <p><span>Friday</span> 11:00 AM - 03:00 PM<br>05:30 PM - 10:00 PM</p>
+                <p><span>Saturday</span> 07:00 AM - 11:00 AM<br>11:00 AM - 03:00 PM<br>05:30 PM - 10:00 PM</p>
+                <p><span>Sunday</span> 07:00 AM - 11:00 AM<br>11:00 AM - 03:00 PM<br>05:30 PM - 10:00 PM</p>
+            </div>
+        </div>
+
+        <!-- Map -->
+        <div class="footer-box">
+            <h3>Find Us</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6073.747534770545!2d-74.487014!3d40.433794!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c51d256559e9%3A0x1698cc8dbae9899a!2sTHANJAI%20MESS%20(AUTHENTIC%20SOUTH%20INDIAN%20RESTAURANT)!5e0!3m2!1sen!2sin!4v1765780387066!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            </iframe>
+        </div>
+
+    </div>
+    
+    <div class="footer-bottom">
+        2025 © Thanjai Mess All Right Reserved.<br>
+       <u>Terms & Conditions</u><br>
+        Powered by <img src="images/foot maghil.png">
+    
+
+</footer>
+
+
 <script>
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("navLinks");
 
   hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
+  });
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+    });
   });
 </script>
 
