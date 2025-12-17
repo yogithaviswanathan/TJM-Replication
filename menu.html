@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanjai Mess Menu - Authentic South Indian Cuisine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+          <img src="images/Tjm logo.png" class="logo" alt="Thanjai Mess Logo">
+          <span class="brand-name">Thanjai Mess</span>
+        </div>
+    
+        <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation">
+        <label class="menu-button" for="menu-toggle" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+    
+        <div class="nav-drawer">
+          <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="index.html#about">About Us</a>
+            <a href="#locations">Our Locations</a>
+            <a href="index.html#events">Events</a>
+            <a href="index.html#order">Order Online</a>
+            <a href="catering.html">Catering Inquiry</a>
+            <a href="#blog">Blog</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+          <div class="nav-actions">
+          </div>
+        </div>
+      </header>
+
+  <main class="menu-page">
+    <!-- Filter Controls -->
+    <section class="filter-section">
+      <!-- Mobile Dropdown -->
+      <div class="filter-dropdown-wrapper">
+        <select id="categorySelect" class="filter-select" aria-label="Select menu category">
+          <option value="all">All Categories</option>
+          <option value="soups">Soups</option>
+          <option value="veg-appetizer">Veg Appetizer</option>
+          <option value="non-veg-appetizer">Non Veg Appetizer</option>
+          <option value="egg-appetizer">Egg Appetizer</option>
+          <option value="biriyani">Biriyani</option>
+          <option value="veg-curries">Veg Curries</option>
+          <option value="non-veg-curries">Non Veg Curries</option>
+          <option value="south-indian-specials">South Indian Specials</option>
+          <option value="thanjai-specials">Thanjai Specials</option>
+          <option value="chinese">Chinese</option>
+          <option value="breads-parottas">Breads &amp; Parottas</option>
+          <option value="dosai-corner">Dosai Corner</option>
+          <option value="desserts">Desserts</option>
+          <option value="beverages">Beverages</option>
+        </select>
+      </div>
+
+      <!-- Desktop / Tablet Pills -->
+      <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="soups">Soups</button>
+        <button class="filter-btn" data-filter="veg-appetizer">Veg Appetizer</button>
+        <button class="filter-btn" data-filter="non-veg-appetizer">Non Veg Appetizer</button>
+        <button class="filter-btn" data-filter="egg-appetizer">Egg Appetizer</button>
+        <button class="filter-btn" data-filter="biriyani">Biriyani</button>
+        <button class="filter-btn" data-filter="veg-curries">Veg Curries</button>
+        <button class="filter-btn" data-filter="non-veg-curries">Non Veg Curries</button>
+        <button class="filter-btn" data-filter="south-indian-specials">South Indian Specials</button>
+        <button class="filter-btn" data-filter="thanjai-specials">Thanjai Specials</button>
+        <button class="filter-btn" data-filter="chinese">Chinese</button>
+        <button class="filter-btn" data-filter="breads-parottas">Breads & Parottas</button>
+        <button class="filter-btn" data-filter="dosai-corner">Dosai Corner</button>
+        <button class="filter-btn" data-filter="desserts">Desserts</button>
+        <button class="filter-btn" data-filter="beverages">Beverages</button>
+      </div>
+    </section>
+
+    <!-- Menu Sections are rendered from JSON -->
+    <div id="menu-sections" aria-live="polite"></div>
+    <div id="menu-empty-state" class="menu-empty-state" hidden>
+      <p>No items found for this category.</p>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-cols-container">
+        <div class="footer-col contact-info-col">
+            <h4>Contact Info</h4>
+            
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i> 
+                <p>2226 US-130, North Brunswick Township, NJ 08902</p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i> 
+                <p>+1 (732) 820-6808</p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i> 
+                <p>thanjaimess.usa@gmail.com</p>
+            </div>
+            
+            <div class="socials">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <div class="payment-methods">
+                <p>We Accept</p>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-discover"></i>
+                <i class="fab fa-cc-amex"></i>
+            </div>
+        </div>
+        
+        <div class="footer-col hours-col">
+            <h4>Opening Hours</h4>
+            <ul>
+                <li><span>Monday</span><span>11:00 AM - 02:30 PM</span></li>
+                <li><span></span><span>05:30 PM - 09:00 PM</span></li>
+                <li><span>Tuesday</span><span class="holiday">Holiday</span></li>
+                <li><span>Wednesday</span><span>11:00 AM - 02:30 PM</span></li>
+                <li><span></span><span>05:30 PM - 10:00 PM</span></li>
+                <li><span>Thursday</span><span>11:00 AM - 02:30 PM</span></li>
+                <li><span></span><span>05:30 PM - 10:00 PM</span></li>
+                <li><span>Friday</span><span>11:00 AM - 03:00 PM</span></li>
+                <li><span></span><span>05:30 PM - 10:00 PM</span></li>
+                <li><span>Saturday</span><span>07:00 AM - 11:00 AM</span></li>
+                <li><span></span><span>11:00 AM - 03:00 PM</span></li>
+                <li><span></span><span>05:30 PM - 10:00 PM</span></li>
+                <li><span>Sunday</span><span>07:00 AM - 11:00 AM</span></li>
+                <li><span></span><span>11:00 AM - 03:00 PM</span></li>
+                <li><span></span><span>05:30 PM - 10:00 PM</span></li>
+            </ul>
+        </div>
+        
+        <div class="footer-col map-col">
+            <h4>Find Us</h4>
+            <img src="https://maps.googleapis.com/maps/api/staticmap?center=..." alt="Map of Thanjai Mess" class="footer-map-image">
+        </div>
+    </div>
+  </footer>
+
+  <script src="menu.js"></script>
+</body>
+</html>
